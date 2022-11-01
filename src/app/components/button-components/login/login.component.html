@@ -1,0 +1,15 @@
+<p (click)="viewLogin()" >{{titulo}}</p>
+
+<div *ngIf="form" class="modal-form">
+    <form action="" method="post" >
+        <div (click)="viewLogin()" class="close">
+            <img src="../../assets/close-svgrepo-com.svg" alt="">
+        </div>
+        <div class="form-content">
+            <label for="gmail">Gmail: </label><input name="gmail" type="text">
+            <label for="password">Password: </label><input type="password" name="password"id="">
+            <input type="submit" value="Get in">
+
+        </div>
+    </form>
+</div>

@@ -1,0 +1,66 @@
+.acerca-de{
+    // border:1px solid red;
+    width: 100%;
+    min-height: 50vh;
+
+
+
+    background-color: white;
+    .acerca-de-photo-name{
+
+        display: flex;
+        align-items: flex-end;
+        // border: 1px solid firebrick;
+        .photo-perfil{
+            // border: 1px solid firebrick;
+            // display:none
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 8rem;
+            margin-top: -4rem;
+            margin-left: 2rem;
+            height: 8rem;
+            border: 3px solid black;
+            border-radius: 100px;
+            margin-bottom: 1rem;
+        }
+        
+        .name{
+            // border: 1px solid firebrick;
+            margin-left: 3rem;
+            margin-bottom: 1rem;
+            h2{
+                font-size: x-large;
+            }
+        }
+    }
+
+    .user-description{
+        position: relative;
+        margin: 2rem;
+        padding-top:1rem;
+        h3{
+            margin: 1rem 0;
+            font-size: large;
+        }
+        p{
+            // margin-top: 1rem;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media(max-width:700px){
+    .acerca-de{
+        .acerca-de-photo-name{
+            .photo-perfil{
+                
+                display: none;
+            }
+            .name{
+                margin-top: 1rem;
+            }
+        }
+    }
+}

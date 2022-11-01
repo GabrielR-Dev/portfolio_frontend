@@ -1,0 +1,67 @@
+p{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.modal-form{
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+
+    
+    
+    form{
+        width: 80%;
+        height: 50%;
+        // border: 1px solid green;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        
+        .close{
+            width: 3rem;
+            height: 3rem;
+            // border: 1px solid gold;
+            align-self: flex-end;
+            margin-top: 10px;
+            margin-right: 10px;
+            background-color: aqua;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .form-content{
+            width: 90%;
+            height: 90%;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            // border:1px solid black;
+            justify-content: center;
+            align-items: center;
+
+            label{
+                display: block;
+                margin-bottom: 1rem;
+                font-weight: bolder;
+            }
+            input{
+                width: inherit;
+                margin-bottom: 1rem;
+                align-self: center;
+            }
+        }
+
+    }
+}

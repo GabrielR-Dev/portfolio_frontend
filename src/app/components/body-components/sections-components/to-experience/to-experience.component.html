@@ -1,0 +1,28 @@
+<section class="experience">
+    <h3>Experiencias</h3>
+
+    <!-- Agregar boton para agregar datos al portafolio -->
+    <app-add-data [datos] = "datos"></app-add-data>
+
+    <div class="experience-user">
+
+        <div class="worked" *ngFor="let dato of datos['dataSeccion']">
+
+        <!-- Agregamos un boton para editar los datos pasados desde un input -->
+        <app-edition-profile [datos] = "datos" [dato]="dato"></app-edition-profile>  
+
+            <input type="hidden" name="{{dato['idArticulo']}}">
+            <div class="logo">
+                <img src="{{dato['img']}}" alt="">
+            </div>
+
+            <div class="data-worked">
+                <h4>{{ dato['titulo'] }}</h4>
+                <p>{{ dato['p'] }}</p>
+
+            </div>
+        </div>
+
+        
+    </div>
+</section>

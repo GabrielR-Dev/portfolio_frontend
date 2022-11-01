@@ -1,0 +1,43 @@
+form{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    width: 90%;
+    height: 80%;
+    border: 1px solid gold;
+
+    margin: 0 auto;
+    margin-top: 2rem;
+
+    .inp{
+        display: flex;
+        justify-content: space-around;
+        label{
+            color: white;
+
+            font-size: x-large;
+        }
+
+        input[type=text]{
+            // background-color: red;
+            width:100%;
+        }
+        input[type=number]{
+            width:100%;
+            -webkit-appearance: none; 
+            
+        }
+        input[type=textarea]{
+            resize: none;
+        }
+        input[type=text]{
+            
+        }
+    }
+    
+    
+
+}

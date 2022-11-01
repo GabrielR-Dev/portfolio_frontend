@@ -1,0 +1,32 @@
+<section class="acerca-de" id="about">
+
+    <div class="acerca-de-photo-name">
+        <div class="photo-perfil" style="position: relative;">
+            <img src="{{dato['img']}}" alt="">
+            
+            <!-- Agregamos un boton para editar los datos pasados desde un input
+            <app-edition-profile [datos] = "dato"></app-edition-profile>  -->
+        </div>
+        <div class="name">
+            <h2>Gabriel Omar Rolón</h2>
+        </div>
+
+        
+
+    </div>
+
+        <div class="user-description">
+            
+            <!-- Agregamos un boton para editar los datos pasados desde un input -->
+            <app-edition-profile [datos] = "datos" [dato]="dato"></app-edition-profile> 
+
+            <h3>{{dato['titulo']}}</h3> 
+
+             
+            <p>{{dato['p']}}</p> 
+
+            
+
+        </div>
+
+</section>

@@ -1,0 +1,28 @@
+<!-- <div class="content" *ngFor="let item of dato"> -->
+<div class="content" >
+
+  <!-- En cada componente se ingresan los datos correspondientes del componente padre con Input -->
+  <app-header [datos]="dato[0]"></app-header>
+
+  <div class="content-sections" >
+
+    <app-about [datos]="dato[1]"></app-about>
+
+    <hr>
+    
+    <app-proyects [datos]="dato[2]"></app-proyects>
+    
+    <hr>
+    <app-soft-skills [datos]="dato[3]"></app-soft-skills>
+    
+    <hr>
+    <app-to-experience [datos]="dato[4]"></app-to-experience>
+    
+    <hr>
+  </div>
+
+
+  <app-footer-pag></app-footer-pag>
+
+
+</div>

@@ -1,0 +1,64 @@
+<div class="crud-buttons" *ngIf="conection.isConnect" >
+
+    <div class="btn" (click)="viewModal()">
+        <img src="../../../../assets/add-svgrepo-com.svg" alt="">
+    </div>
+
+</div>
+
+
+<div *ngIf="modalV && conection.isConnect" class="modal" >
+
+    <div class="modalv">
+        
+        <div class="close" (click)="close()" >
+            <img src="../../../../assets/close-svgrepo-com.svg" alt="">
+        </div>
+
+        <!-- Aqui se agrega el formGrup para poder utilizar los datos enviados desde el input en el servicio de validaciones
+        y el submit para poder utilizar los datos en una funcion -->
+        <form  [formGroup]="validationForms.formData" (submit)="validationForms.addDataForm(this.datos.dataSeccion)">
+
+            <div *ngIf="dato['titulo'] !== undefined">
+                <label for="titulo">Titulo: </label>
+                <input type="text" name="titulo" id="titulo" formControlName="titulo" >
+                <!-- <div *ngIf="validationForms.formAddData.get('titulo')?.touched && validationForms.formAddData.get('titulo')?.errors?.['required']"><p>Este.</p></div> -->
+                <div ><p style="color: white;">{{validationForms.isValidateTitulo}}</p></div>
+            </div>
+
+            <div *ngIf="dato['img'] !== undefined">
+                <label for="img">Imagen: </label>
+                <input type="text" name="img" id="img" formControlName="img" >
+            </div>
+
+            <div *ngIf="dato['porcentaje'] !== undefined">
+                <label for="porcentaje">Porcentaje: </label>
+                <input type="number" name="porcentaje" id="porcentaje" formControlName="porcentaje" >
+                <div ><p style="color: white;">{{validationForms.isValidatePorcentaje}}</p></div>
+
+            </div>
+            
+            <div *ngIf="dato['link'] !== undefined">
+                <label for="link">Link: </label>
+                <input type="text" name="link" id="link" formControlName="link" >
+                <div ><p style="color: white;">{{validationForms.isValidateLink}}</p></div>
+
+            </div>
+            
+            <div *ngIf="dato['p'] !== undefined">
+                <label for="p">Descripcion: </label>
+                <textarea name="" id="p" cols="30" rows="10" style="resize: none;" formControlName="p" ></textarea>
+                <div ><p style="color: white;">{{validationForms.isValidateP}}</p></div>
+
+            </div>
+
+            <div class="btn" >
+                <button>Agregar</button>
+            </div>
+
+        </form>
+        
+
+    </div>
+</div>
+

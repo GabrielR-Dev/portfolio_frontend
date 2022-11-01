@@ -1,0 +1,22 @@
+<section class="section-proyects">
+    <h3>Proyectos</h3>
+
+    <!-- Agregar boton para agregar datos al portafolio -->
+    <app-add-data [datos] = "datos" ></app-add-data>
+
+    <!-- For para recorrer el array con objetos de la variable datos -->
+    <div class="proyect" *ngFor="let dato of datos['dataSeccion']">
+
+        <!-- Agregamos un boton para editar los datos pasados desde un input -->
+        <app-edition-profile [datos] = "datos" [dato] = "dato"></app-edition-profile> 
+        
+        <input type="hidden" name="{{dato['idArticulo']}}">
+        
+        <h4>{{ dato['titulo'] }}</h4>
+        <p>{{ dato['p'] }}</p>
+        <a href="{{dato['link']}}">Link al proyecto</a>
+
+        
+    </div>
+
+</section>

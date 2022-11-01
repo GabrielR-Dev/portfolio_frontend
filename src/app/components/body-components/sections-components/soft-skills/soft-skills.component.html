@@ -1,0 +1,36 @@
+<section class="content">
+
+    <h1>Soft Skills</h1>
+
+    <!-- Agregar boton para agregar datos al portafolio -->
+    <app-add-data [datos] = "datos"></app-add-data>
+
+    <div class="soft-skills">
+        
+
+
+
+        <!-- <app-edition-profile [datos]= "dataDB" (click)="servicioEventosModal.dataModul(dataDB)" ></app-edition-profile> -->
+        <div class="skill" *ngFor="let dato of datos['dataSeccion']">
+
+            
+            <!-- Agregamos un boton para editar los datos pasados desde un input -->
+            <app-edition-profile [datos] = "datos" [dato]="dato"></app-edition-profile> 
+
+            <input type="hidden" name="{{dato['idArticulo']}}">
+
+            <div class="skill-img">
+
+                <img src="{{dato['img']}}" alt="">
+                
+                <p>{{dato['porcentaje']}}</p>
+
+            </div>
+
+            <p>{{dato['titulo']}}</p>
+            
+        </div>
+    </div>
+
+</section>
+

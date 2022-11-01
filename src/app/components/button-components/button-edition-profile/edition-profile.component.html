@@ -1,0 +1,71 @@
+<div class="crud-buttons" *ngIf="conection.isConnect" >
+
+    <div class="btn" (click)="editData()">
+        <img src="../../../../assets/pencil.svg" alt="">
+    </div>
+
+</div>
+
+
+<div *ngIf="modalV && conection.isConnect" class="modal" >
+
+    <div class="modalv">
+        
+        <div class="close" (click)="close()">
+            <img src="../../../../assets/close-svgrepo-com.svg" alt="">
+        </div>
+
+        <form [formGroup]="validationForms.formData" (submit)="validationForms.addDataForm(this.datos.dataSeccion)">
+
+            <!-- <div> <input type="hidden" name="dato['idArticulo']" formControlName="idArticulo" ></div> -->
+
+            <div *ngIf="dato['titulo'] !== undefined">
+                <label for="titulo">Titulo: </label>
+                <input type="text" name="titulo" id="titulo" value="{{dato['titulo']}}" formControlName="titulo" >
+                <div ><p style="color: white;">{{validationForms.isValidateTitulo}}</p></div>
+
+            </div>
+
+            <div *ngIf="dato['img'] !== undefined">
+                <label for="img">Imagen: </label>
+                <input type="imagen" name="img" id="img" value="{{dato['img']}}" formControlName="img" >
+            </div>
+
+            <div *ngIf="dato['porcentaje'] !== undefined">
+                <label for="porcentaje">Porcentaje: </label>
+                <input type="number" name="porcentaje" id="porcentaje" value="{{dato['porcentaje']}}" formControlName="porcentaje" >
+                <div ><p style="color: white;">{{validationForms.isValidatePorcentaje}}</p></div>
+            </div>
+            
+            <div *ngIf="dato['link'] !== undefined">
+                <label for="link">Link: </label>
+                <input type="text" name="link" id="link" value="{{dato['link']}}" formControlName="link" >
+                <div ><p style="color: white;">{{validationForms.isValidateLink}}</p></div>
+            </div>
+
+            <div *ngIf="dato['p'] !== undefined">
+                <label for="p">Descripcion: </label>
+                <textarea name="" id="p" cols="30" rows="10" style="resize: none;" formControlName="p" >{{dato['p']}}</textarea>
+                <div ><p style="color: white;">{{validationForms.isValidateP}}</p></div>
+            </div>
+
+            <div class="btn" [ngSwitch]="datos['idSeccion']">
+                <input type="submit" value="Editar">
+                <!-- <button>Editar</button> -->
+                <input *ngSwitchCase="'skill'" type="submit" value="Eliminar" (click)="deleteData(dato['idArticulo'])">
+                <input *ngSwitchCase="'proyects'" type="submit" value="Eliminar" (click)="deleteData(dato['idArticulo'])">
+                <input *ngSwitchCase="'experience'" type="submit" value="Eliminar" (click)="deleteData(dato['idArticulo'])">
+            </div>
+        </form>
+
+
+
+
+        <!-- <button>Eliminar</button> -->
+
+    </div>
+
+    
+</div>
+
+
