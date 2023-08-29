@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ConectionService } from 'src/app/services/conection.service';
 
 @Component({
   selector: 'app-header',
@@ -12,22 +13,15 @@ export class HeaderComponent implements OnInit{
     idSeccion:"",
     dataSeccion:{}
   }
-  public dato:any ;
+  public dato:any;
+
+  constructor(private conection : ConectionService){}
   
   
-  display : boolean = false;
 
   ngOnInit(){
-    this.dato = this.datos['dataSeccion'];
-    
-    
-    console.log(this.datos)
-    
+    this.conection.dataHeader();
   }
   
-  displayNav(e:Event){
-    this.display = !this.display;
-
-  }
   
 }

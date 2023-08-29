@@ -1,0 +1,17 @@
+.content{
+    
+    //padding: 1rem;
+
+    .nav{
+        border: 1px solid red;
+
+        .list{
+            display: flex;
+            justify-content: space-around;
+
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+}

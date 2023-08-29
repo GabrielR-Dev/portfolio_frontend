@@ -1,29 +1,18 @@
 <header class="header">
 
     <nav class="header-nav">
-        <div (click)="displayNav($event)" class="nav-menu-hamburg"><img src="../assets/icon-hamburger.svg" alt=""></div>
-        <div class="nav-logo"><img src="../assets/img-logo-AP.png"></div>
-        <div class="initial-sesion close-session">
-            <app-login></app-login>
+        <div class="nav-logo">
+            <img src="../assets/img-logo-AP.png">
         </div>
-
-
-            <ul [ngClass]="{'nav-options' : display, 'nav-none' : !display}">
-            <li><a href="">Seccion 1</a></li>
-            <li><a href="">Seccion 2</a></li>
-                <li><a href="">Seccion 3</a></li>
-                <li><a href="">Seccion 4</a></li>
-                <li><a href="">Seccion 5</a></li>
-            </ul>
-
-
-
+        <div class="initial-sesion close-session">
+        </div>
     </nav>
+
 
     <div class="header-content-portada" >
 
         <!-- Agregamos un boton para editar los datos pasados desde un input -->
-        <app-edition-profile [datos] = "datos" [dato]="dato"></app-edition-profile> 
+        <app-edition-profile [datos] = "datos" [dato]="dato"></app-edition-profile>
         
         <div class="content-img">
             <img src="" alt="">

@@ -1,15 +1,12 @@
 .section-proyects{
     position: relative;
-    margin: 2rem;
+    //margin: 2rem;
+    width: 100%;
+    min-height: 50vh;
 
 
-    h3{
-        display: block;
-        font-size: x-large;
-    }
 
     .proyect{
-        margin: 2rem;
         height: 13rem;
         // border: 1px solid fuchsia;
         display: flex;

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from './services/data.service';
+import { LoginComponent } from './components/body-components/login/login.component';
 
 @Component({
   selector: 'app-root',
@@ -8,16 +9,17 @@ import { DataService } from './services/data.service';
 })
 export class AppComponent implements OnInit {
 
-  constructor(
-    public datos: DataService,
-  ){}
-
   public dato: any;
 
-
+  constructor(
+    public datos: DataService,
+  ){
+  }
+  
   ngOnInit(){
     console.log(this.datos)
     this.dato = this.datos.allData()
+    
   }
 
 }

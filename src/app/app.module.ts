@@ -3,7 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from  '@angular/common/http';
+
+
 
 // Importacion del Header y Footer
 import { FooterPagComponent } from './components/body-components/footer-pag/footer-pag.component';
@@ -19,7 +22,8 @@ import { ProyectsComponent } from './components/body-components/sections-compone
 //Importacion de botones
 import { EditionProfileComponent } from './components/button-components/button-edition-profile/edition-profile.component';
 import { AddDataComponent } from './components/button-components/add-data/add-data.component';
-import { LoginComponent } from './components/button-components/login/login.component';
+import { RouterModule } from '@angular/router';
+import { LoginComponent } from './components/body-components/login/login.component';
 
 
 
@@ -38,13 +42,16 @@ import { LoginComponent } from './components/button-components/login/login.compo
     // Botones
     EditionProfileComponent,
      AddDataComponent,
-    LoginComponent,
+     LoginComponent,
   ],
 
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    HttpClientModule,
+    RouterModule,
+    FormsModule
   ],
 
   providers: [],

@@ -50,6 +50,7 @@
             </div>
 
             <div class="btn" [ngSwitch]="datos['idSeccion']">
+
                 <input type="submit" value="Editar">
                 <!-- <button>Editar</button> -->
                 <input *ngSwitchCase="'skill'" type="submit" value="Eliminar" (click)="deleteData(dato['idArticulo'])">

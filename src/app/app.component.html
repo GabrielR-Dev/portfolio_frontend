@@ -2,24 +2,24 @@
 <div class="content" >
 
   <!-- En cada componente se ingresan los datos correspondientes del componente padre con Input -->
-  <app-header [datos]="dato[0]"></app-header>
+  <!--<app-header [datos]="dato[0]"></app-header>-->
+  <app-header ></app-header>
 
-  <div class="content-sections" >
+  <nav class="nav">
+    <ul class="list">
+      <li><a routerLink="about" routerLinkActive="active">Sobre Mi</a></li>
+      <li><a routerLink="proyectos" routerLinkActive="active">Proyectos</a></li>
+      <li><a routerLink="skills" routerLinkActive="active">Skills</a></li>
+      <li><a routerLink="experiencia" routerLinkActive="active">Experiencia</a></li>
+    </ul>
+  </nav>
 
-    <app-about [datos]="dato[1]"></app-about>
-
-    <hr>
-    
-    <app-proyects [datos]="dato[2]"></app-proyects>
-    
-    <hr>
-    <app-soft-skills [datos]="dato[3]"></app-soft-skills>
-    
-    <hr>
-    <app-to-experience [datos]="dato[4]"></app-to-experience>
-    
-    <hr>
+  
+  <div class="content-sections">
+    <router-outlet></router-outlet>
   </div>
+
+
 
 
   <app-footer-pag></app-footer-pag>

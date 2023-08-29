@@ -1,0 +1,16 @@
+<section>
+    <h1>Formulario</h1>
+
+    <form [formGroup] = "form" (ngSubmit)="dataForm()">
+
+        <div>
+            <label for="email: ">Email: </label><input type="email" formControlName="username" id="email">
+        </div>
+        <div>
+            <label for="password">Password: </label><input type="password" formControlName="password" id="password">
+        </div>
+
+        <div><input type="submit" value="Enviar"></div>
+
+    </form>
+</section>
